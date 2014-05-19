@@ -1,0 +1,41 @@
+body {
+background: white url("images/pic.jpg") no-repeat ;
+font-size: 48px;
+line-height: 70px;
+}
+
+
+header {
+	font-family: "宋体";
+	font-size: medium;
+	font-style: normal;
+	font-weight: bold;
+	color: #000000;
+	background-color: #CC0033;
+	height: 50px;
+	width:81%;
+	margin:auto;
+}
+
+main {
+	height: 300px;
+	width:80%;
+	margin:auto;
+	font-family: "宋体";
+	font-size: 50px;
+	font-style: normal;
+	font-weight: normal;
+	border: medium solid #000000;
+}
+
+#main ul { list-style: none; margin: 25px; padding: 0px; }
+
+footer {
+	height: 68px;
+	width:100%;
+	margin:auto;
+	font-family: "宋体";
+	font-size: medium;
+	background-color: #FFFF66;
+	text-align: center;
+}

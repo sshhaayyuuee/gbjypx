@@ -1,0 +1,19 @@
+<h1>{{ course.name }}</h1>
+
+{{student.name}}
+
+{% block content %}
+    <h2>Publishers</h2>
+    <ul>
+        {% for stu in Student %}
+            <li>{{ stu.name }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+
+<form action="" method="post">
+{% csrf_token %}
+    <input type="text" name="choice"  />
+<input type="submit" value="Vote" />
+</form>

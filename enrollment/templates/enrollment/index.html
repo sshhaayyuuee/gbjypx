@@ -1,0 +1,38 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'enrollment/style.css' %}" />
+<html >
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>干部教育处——报名系�?/title>
+<center><font size=12>干部教育�? 报名系统</font></center>
+
+</head>
+
+<body>
+
+<div id="header"><font size=6>当前培训�?/font></div>
+
+<div id="main">
+<p>
+
+{% if Course_list %}
+    <ul>
+    {% for course in Course_list %}
+        <li><a href="/enrollment/add/{{ course.id }}" </a>{{ course.name }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Course are available.</p>
+{% endif %}
+
+</p>
+</div>
+
+<div id="footer">
+ <p><font size=4>宁夏自治区党委组织部 版权所�?/font></p>
+ <p><font size=4>联系电话�?951-6669328</font></p>
+</div>
+
+</body>
+</html>
