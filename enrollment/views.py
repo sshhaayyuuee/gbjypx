@@ -17,7 +17,7 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         return Course.objects.all()
-	
+
 class DetailView(generic.DetailView):
     model = Student
     template_name = 'enrollment/detail.html'
