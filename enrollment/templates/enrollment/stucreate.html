@@ -1,11 +1,13 @@
 {% load staticfiles %}
 <link rel="stylesheet" type="text/css" href="{% static 'enrollment/style1.css' %}" />
+
 <html >
 
 <form action="" method="post">{% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="提交" style="width:80px; height:40px;"/>
+    <input type="submit" value="确认报名" style="width:80px; height:40px;"/>
 </form>
+
 <body>
 
 <div id="footer">
