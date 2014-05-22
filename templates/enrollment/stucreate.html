@@ -2,18 +2,16 @@
 <link rel="stylesheet" type="text/css" href="{% static 'enrollment/style1.css' %}" />
 
 <html >
+报名班级：{{ course_id }}
 
 <form action="" method="post">{% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="确认报名" style="width:80px; height:40px;"/>
 </form>
 
-<body>
-
 <div id="footer">
  <p><font size=4>宁夏自治区党委组织部 版权所有</font></p>
  <p><font size=4>联系电话：0951-6669328</font></p>
 </div>
 
-</body>
 </html>
