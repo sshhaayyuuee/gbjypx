@@ -17,7 +17,7 @@ def StuCreate(request, course_id):
             new_data = form.save(commit=False)
             new_data.course = Course.objects.get(pk=course_id)
             new_data.save()
-            return HttpResponseRedirect('/enrollment/') # Redirect after POST
+            return HttpResponseRedirect('/enrollment/thanks/') # Redirect after POST
     else:
         form = StudentForm()  # An unbound form
 
@@ -32,3 +32,7 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         return Course.objects.all()
+
+def thanks(request):
+    return HttpResponse('谢谢报名')
+

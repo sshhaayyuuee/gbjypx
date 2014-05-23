@@ -5,4 +5,5 @@ from enrollment import views
 urlpatterns = patterns('',
     url(r'^$', views.IndexView.as_view(),name='index'),
     url(r'^add/(?P<course_id>\d+)/$',views.StuCreate,name='add'),
+    url(r'^thanks/$', views.thanks, name='thanks'),
 )
