@@ -1,37 +1,39 @@
 {% load staticfiles %}
 <link rel="stylesheet" type="text/css" href="{% static 'enrollment/style.css' %}" />
+<link rel="stylesheet" href="{% static 'enrollment/reset.css' %}">
 <html >
-
 <head>
-<title>干部教育处——报名系</title>
-<center><font size=12>干部教育报名系统</font></center>
-
+<title>干部教育处——报名系统</title>
 </head>
 
 <body>
+<div id = "container">
+    <div id="header">干部教育培训报名系统</div>
+    <div id="main">
+        <div id="left" >
+        <div class="nav_bar"><h2>班级名称：</h2></div>
 
-<div id="header"><font size=6>当前培训</font></div>
+            <p> {% if Course_list %}
+            <ul>
+            {% for course in Course_list %}
+               <li><a href="/enrollment/add/{{ course.id }}"/a>{{ course.name }}</li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>目前还没有新的班级</p>
+        {% endif %}
+        </p>
+        </div>
 
-<div id="main">
-<p>
+        <div id="right" > 消息公告  </div>
 
-{% if Course_list %}
-    <ul>
-    {% for course in Course_list %}
-        <li><a href="/enrollment/add/{{ course.id }}" </a>{{ course.name }}</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No Course are available.</p>
-{% endif %}
+    </div>
 
-</p>
-</div>
+    <div id="footer">
+     <p>宁夏自治区党委组织部 版权所有</p>
+     <p>联系电话0951-6669328</p>
+    </div>
 
-<div id="footer">
- <p><font size=4>宁夏自治区党委组织部 版权所font></p>
- <p><font size=4>联系电话951-6669328</font></p>
-</div>
-
+ </div>
 </body>
 </html>

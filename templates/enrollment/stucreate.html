@@ -2,16 +2,26 @@
 <link rel="stylesheet" type="text/css" href="{% static 'enrollment/style1.css' %}" />
 
 <html >
-报名班级：{{ course_id }}
+<head>
+<title>干部教育处——报名系</title>
+</head>
 
-<form action="" method="post">{% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="确认报名" style="width:80px; height:40px;"/>
-</form>
+<body>
+<div id = "container">
+    <div id="header"></div>
+    <div id="main">
+        报名班级：
+        <form action="" method="post">{% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="确认报名" style="width:80px; height:40px;"/>
+        </form>
+    </div>
 
-<div id="footer">
- <p><font size=4>宁夏自治区党委组织部 版权所有</font></p>
- <p><font size=4>联系电话：0951-6669328</font></p>
-</div>
+    <div id="footer">
+     <p>宁夏自治区党委组织部 版权所有</p>
+     <p>联系电话0951-6669328</p>
+    </div>
 
+ </div>
+</body>
 </html>
