@@ -10,22 +10,29 @@
 <div id = "container">
     <div id="header">干部教育培训报名系统</div>
     <div id="main">
-        <div id="left" >
-        <div class="nav_bar"><h2>班级名称：</h2></div>
 
-            <p> {% if Course_list %}
-            <ul>
+        <div id="left" >
+        <div class="nav_bar">班级名称：</div>
+
+
+         {% if Course_list %}
+
             {% for course in Course_list %}
-               <li><a href="/enrollment/add/{{ course.id }}"/a>{{ course.name }}</li>
+               <li>
+                   <a href="/enrollment/add/{{ course.id }}">{{ course.name }}</a>
+               </li>
             {% endfor %}
-            </ul>
+
         {% else %}
             <p>目前还没有新的班级</p>
         {% endif %}
-        </p>
+
+
         </div>
 
-        <div id="right" > 消息公告  </div>
+        <div id="right" >
+        <div class="nav_bar">消息公告</div>
+        </div>
 
     </div>
 

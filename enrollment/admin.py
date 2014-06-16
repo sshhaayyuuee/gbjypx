@@ -12,5 +12,5 @@ class CourseAdmin(admin.ModelAdmin):
     list_display = ('name','time','days','place')
     search_fields = ['name','days']
 
-admin.site.register(Student,StudentAdmin)
-admin.site.register(Course,CourseAdmin)
+admin.site.register(Student, StudentAdmin)
+admin.site.register(Course, CourseAdmin)

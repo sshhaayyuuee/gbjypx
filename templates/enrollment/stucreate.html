@@ -1,16 +1,16 @@
 {% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'enrollment/style1.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'enrollment/stucreate.css' %}" />
 
 <html >
 <head>
-<title>干部教育处——报名系</title>
+<title>干部教育处——报名系统</title>
 </head>
 
 <body>
 <div id = "container">
     <div id="header"></div>
+
     <div id="main">
-        报名班级：
         <form action="" method="post">{% csrf_token %}
             {{ form.as_p }}
             <input type="submit" value="确认报名" style="width:80px; height:40px;"/>

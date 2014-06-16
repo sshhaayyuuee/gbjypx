@@ -1,6 +1,5 @@
 from django.shortcuts import get_object_or_404, render_to_response, render
 from django.http import HttpResponseRedirect
-from django.core.urlresolvers import reverse
 from django.views import generic
 from django.http import HttpResponse
 
@@ -30,8 +29,9 @@ class IndexView(generic.ListView):
     template_name = 'enrollment/index.html'
     context_object_name = 'Course_list'
 
+
     def get_queryset(self):
-        return Course.objects.all()
+        return Course.objects.order_by("-id")[:5]
 
 def thanks(request):
     return HttpResponse('谢谢报名')

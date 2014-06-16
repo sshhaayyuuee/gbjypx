@@ -23,7 +23,7 @@ body{
 }
 
 #main{
-	height:380px;
+	height:360px;
     width:1000px;
 	margin-top:10px;
 }
@@ -31,8 +31,7 @@ body{
 #left {
 	height: 300px;
     width:400px;
-
-    padding:20px;
+    padding:5px;
 	font-family: "微软雅黑";
 	font-size: 20px;
 	float:left;
@@ -55,8 +54,7 @@ body{
 	font-family: "微软雅黑";
 	font-size: 20px;
 	text-align: center;
-    padding-top: 5px;
-
+    padding-top: 2px;
 }
 
 li:hover{
