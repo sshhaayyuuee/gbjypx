@@ -34,5 +34,4 @@ class IndexView(generic.ListView):
         return Course.objects.order_by("-id")[:5]
 
 def thanks(request):
-    return HttpResponse('谢谢报名')
-
+    return render(request, 'enrollment/thanks.html', )
